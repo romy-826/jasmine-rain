@@ -1,0 +1,13 @@
+{
+  "name": "jasmine-rain-garden",
+  "version": "1.0.0",
+  "private": true,
+  "description": "茉莉雨：属于你的掌心茉莉花园",
+  "scripts": {
+    "start": "node launch.cjs",
+    "check": "node --check dist/app.js && node --check launch.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
