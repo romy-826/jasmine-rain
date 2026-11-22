@@ -1,0 +1,18 @@
+/* Full-bleed jasmine garden, centered invitation, one entry action. */
+.landing #welcome{position:fixed;inset:0;z-index:10;width:100%;height:100%;height:100dvh;margin:0;padding:36px 24px;overflow:auto;display:grid;place-items:center;isolation:isolate;pointer-events:auto;background:#102b32}
+.garden-background,.garden-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.garden-background{object-fit:cover;object-position:center 58%;z-index:-3}
+.garden-overlay{z-index:-2;background:radial-gradient(ellipse at 50% 42%,#071e2660 0%,#071e261c 46%,#071c2638 100%),linear-gradient(180deg,#07171e4a 0%,#071e2620 46%,#061a2370 100%)}
+.hero-content{width:min(100%,720px);text-align:center;display:flex;flex-direction:column;align-items:center;position:relative;padding:16px 0 30px;color:#f4f1df;text-shadow:0 2px 28px #06191dc0}
+.landing #welcome .hero-content h1{font-family:"STSong","Songti SC","SimSun",serif;font-size:clamp(72px,9vw,136px);font-weight:400;line-height:1.2;letter-spacing:.2em;text-indent:.2em;margin:0;white-space:nowrap;color:#f4f0dd}
+.landing #welcome .hero-content .garden-subtitle{font:400 clamp(17px,1.5vw,22px)/1.8 "STSong","Songti SC","SimSun",serif;letter-spacing:.23em;text-indent:.23em;margin:20px 0 0;color:#e3e7d7}
+.landing #welcome .hero-content .garden-invitation{font:400 16px/2.1 "STSong","Songti SC","SimSun",serif;letter-spacing:.14em;margin:52px 0 38px;color:#dde4d4}
+.landing #welcome #experience{position:static;inset:auto;display:inline-flex;align-items:center;justify-content:center;width:auto;height:auto;min-width:264px;min-height:56px;margin:0;padding:14px 30px;border:1px solid #d8e1c78a;border-radius:2px;background:#d3ddbb16;box-shadow:inset 0 0 0 4px #e1e8cf08,0 8px 36px #06151c25;backdrop-filter:blur(10px);color:#f3f2e1;font:400 16px/1.5 "STSong","Songti SC","SimSun",serif;letter-spacing:.13em;clip-path:none;transform:none;filter:none;transition:background .25s,border-color .25s,box-shadow .25s;cursor:pointer;text-shadow:0 1px 8px #051c26}
+.landing #welcome #experience:hover{transform:none;filter:none;background:#c8dbb934;border-color:#e3e9c9;box-shadow:inset 0 0 0 4px #e1e8cf0b,0 8px 36px #06151c25}
+.landing #welcome #experience:focus-visible{outline:2px solid #f4efd1;outline-offset:6px;border-radius:2px}
+@media(max-width:760px){.landing #welcome{padding:32px 20px}.garden-background{object-position:54% center}.hero-content{padding:12px 0 26px}.landing #welcome .hero-content h1{font-size:clamp(62px,17vw,96px);letter-spacing:.14em;text-indent:.14em}.landing #welcome .hero-content .garden-subtitle{font-size:16px;letter-spacing:.15em;text-indent:.15em;margin-top:18px}.landing #welcome .hero-content .garden-invitation{font-size:15px;letter-spacing:.08em;margin:42px 0 34px}.landing #welcome #experience{min-width:246px;min-height:54px;font-size:16px}.garden-overlay{background:linear-gradient(180deg,#061b234a,#061b2366 55%,#061b2338)}}
+@media(max-height:560px){.landing #welcome{padding:18px 24px}.hero-content{padding:0}.landing #welcome .hero-content h1{font-size:clamp(54px,14vh,80px)}.landing #welcome .hero-content .garden-subtitle{margin-top:10px;font-size:16px}.landing #welcome .hero-content .garden-invitation{margin:24px 0 20px;font-size:14px}.landing #welcome #experience{min-height:48px;padding:10px 24px}}
+@media(prefers-reduced-motion:reduce){.landing #welcome #experience{transition:none}}
+
+.landing #welcome{grid-template-columns:minmax(0,1fr);justify-content:stretch;align-content:center}.hero-content{justify-self:center}
+

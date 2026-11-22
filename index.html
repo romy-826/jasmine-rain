@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#122b35"><title>茉莉雨 · 掌心花园</title><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="landing.css?v=1"></head>
+<body class="landing">
+<video id="camera" autoplay playsinline muted></video><div class="shade"></div><canvas id="stage" aria-label="手势茉莉花园"></canvas>
+<header><div class="brand">茉莉雨<span>掌心花园</span></div><div class="session-actions"><button id="back">返回首页</button><button id="cameraSettings">检查画面</button><button id="cameraButton">开启摄像头</button></div></header>
+<main id="welcome" aria-labelledby="gardenTitle">
+<img class="garden-background" src="assets/jasmine-garden.png" alt="月光下，一片繁茂的茉莉花园向远处延伸" fetchpriority="high">
+<div class="garden-overlay" aria-hidden="true"></div>
+<div class="hero-content">
+<h1 id="gardenTitle">茉莉雨</h1>
+<p class="garden-subtitle">属于你的掌心茉莉花园</p>
+<p class="garden-invitation">轻轻抬手，接住一场花雨。<br>让一首歌，在掌心慢慢盛开。</p>
+<button id="experience">进入你的掌心花园</button>
+</div>
+</main>
+<aside id="guide">轻点开花　·　张掌成簇　·　挥手留香</aside>
+<div id="message" role="status" aria-live="polite">摄像头尚未开启，可先用鼠标体验</div>
+<section id="cameraHelp" hidden aria-labelledby="cameraHelpTitle"><h2 id="cameraHelpTitle">检查摄像头</h2><p id="cameraHelpText"></p><label>选择摄像头<select id="cameraSelect"><option value="">系统默认摄像头</option></select></label><div class="help-actions"><button id="refreshCameras">刷新设备</button><button id="retryCamera">重试开启</button><button id="dismissHelp">先用鼠标体验</button></div><p class="small">如果正在应用内浏览，请尝试在系统 Edge / Chrome 中打开同一地址。也请检查 Windows 设置 → 隐私和安全性 → 摄像头，允许桌面应用访问。</p></section>
+<footer><div class="track"><div><strong>茉莉雨</strong><span id="musicState">等待播放</span></div><button id="play" aria-label="播放音乐">播放</button><label class="timeline"><span class="sr">播放进度</span><input id="seek" type="range" min="0" max="100" value="0" step="0.1"><span id="time">0:00 / 0:00</span></label></div><div class="options"><label>花形 <select id="flowerType"><option value="mix">混合茉莉</option><option value="star">星形单瓣</option><option value="round">圆瓣重瓣</option><option value="ball">层叠花球</option><option value="bud">含苞茉莉</option></select></label><label>音量 <input id="volume" aria-label="音量" type="range" min="0" max="1" step="0.01" value="0.7"></label><button id="clear">清空花朵</button></div></footer>
+<audio id="music" src="assets/jasmine-rain-80s.m4a" preload="auto"></audio>
+<script type="module" src="app.js?v=3"></script>
+</body></html>
