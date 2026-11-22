@@ -16,3 +16,10 @@
 
 .landing #welcome{grid-template-columns:minmax(0,1fr);justify-content:stretch;align-content:center}.hero-content{justify-self:center}
 
+
+#browserAdvice{position:fixed;z-index:15;top:max(10px,env(safe-area-inset-top));left:12px;right:12px;max-width:640px;margin:auto;padding:10px 14px;color:#eff3df;background:#102a32ed;border:1px solid #d5e6d14a;border-radius:8px;font:13px/1.6 "Microsoft YaHei",sans-serif;backdrop-filter:blur(8px)}
+@media(pointer:coarse){footer{backdrop-filter:none}body.live .shade{background:linear-gradient(0deg,#071321c0,transparent 40%,#07132140)}}
+
+
+.playing #browserAdvice{display:none}
+

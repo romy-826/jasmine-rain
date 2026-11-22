@@ -3,7 +3,7 @@
 1. 解压此压缩包。
 2. 打开 https://github.com/romy-826/jasmine-rain ，进入 Code。
 3. 点击 Add file → Upload files。
-4. 拖入解压目录内的 index.html、app.js、styles.css、landing.css，以及整个 assets 文件夹。
+4. 拖入解压目录内的 index.html、app.js、styles.css、landing.css、vision-loader.js、hand-worker.js，以及整个 assets 文件夹。
    重点：必须把 assets 文件夹作为文件夹拖入，不能进入各子文件夹后把文件全部平铺上传。
    新文件会覆盖同名旧文件，不需要删除已有仓库。
 5. 上传页面中确认路径类似 assets/mediapipe/hand_landmarker.task，随后 Commit changes。
@@ -32,3 +32,10 @@ assets/
 这份包已把网站入口放在根目录，适合 GitHub Pages 的“main / (root)”发布。
 包含原有 80 秒配乐、首页花园和 3–5 秒花朵自动淡出逻辑。
 需要允许摄像头访问。若模型下载因网络中断而失败，可再次点击“重试手势”。
+
+手机优化版补充：需要上传根目录 vision-loader.js 和 hand-worker.js；assets/jasmine-garden.webp 是新的轻量背景。
+建议 iPhone 通过 Safari 打开。首次手势启动仍需下载约 17 MB 引擎和模型，页面会显示实际进度；完整文件会缓存，网络中断时自动重试一次。不支持后台识别的浏览器会尝试兼容模式。
+手机默认单手识别、640×480 左右摄像头输入、480px 推理帧、约 9 次/秒识别和最高约 30 帧/秒绘制；花朵上限 24、粒子上限 40。花朵仍在 3–5 秒消失，配乐仍为 80 秒。
+本机 Edge 的移动端模拟已验证：后台推理、缓存后屏蔽模型下载仍能启动、无 Worker 时兼容模式启动。尚未通过 iPhone 真机验证。
+本更新不会自动同步到 GitHub，需要按上述目录结构上传覆盖。原有 PNG 背景可以保留，但新版不再使用。
+
